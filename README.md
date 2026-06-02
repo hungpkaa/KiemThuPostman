@@ -44,8 +44,36 @@ Sử dụng Postman để kiểm thử các API cơ bản với các phương th
 - Body:
 
 ```json
-{
-  "title": "Postman Test",
-  "body": "Day la bai viet duoc tao bang Postman",
-  "userId": 1
-}
+# BÁO CÁO TÌM HIỂU POSTMAN
+
+## Collection
+
+![Collection](images/collection.png)
+
+## GET Request
+
+![GET](images/get-post-detail.png)
+
+Kết quả: 200 OK
+
+## POST Request
+
+![POST](images/post-create-post.png)
+
+Kết quả: 201 Created
+
+## Kiểm thử lỗi
+
+![ERROR](images/get-error.png)
+
+Kết quả: 404 Not Found
+
+## Test Script
+
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+
+Kết quả kiểm thử thành công.
