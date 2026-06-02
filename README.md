@@ -49,10 +49,3 @@ Sử dụng Postman để kiểm thử các API cơ bản với các phương th
   "body": "Day la bai viet duoc tao bang Postman",
   "userId": 1
 }
-##6. Kịch bản kiểm thử 4: GET sai đường dẫn
-Phương thức: GET
-URL: https://jsonplaceholder.typicode.com/abcxyz
-Kết quả mong đợi: Server báo lỗi không tìm thấy
-Kết quả thực tế: Server trả về lỗi
-Status code: 404 Not Found
-Trạng thái: Không thành công
