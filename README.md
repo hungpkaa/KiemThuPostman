@@ -1,32 +1,51 @@
-# KiemThuPostman
-# BÁO CÁO TÌM HIỂU CÔNG CỤ POSTMAN
+# BÁO CÁO KIỂM THỬ API BẰNG POSTMAN
 
-## 1. Giới thiệu
+Tên dự án: Kiểm thử API với JSONPlaceholder  
+Người kiểm thử: Vũ Tiến Hưng  
+Công cụ sử dụng: Postman  
+API sử dụng: https://jsonplaceholder.typicode.com  
 
-Postman là công cụ hỗ trợ kiểm thử API phổ biến, cho phép gửi các HTTP Request và kiểm tra phản hồi từ máy chủ.
+## 1. Mục tiêu kiểm thử
 
-## 2. Cài đặt Postman
+Sử dụng Postman để kiểm thử các API cơ bản với các phương thức GET, POST và kiểm tra phản hồi từ server.
 
-Đã tải và cài đặt Postman trên máy tính.
+## 2. Môi trường kiểm thử
 
-## 3. Thực hành
+- Hệ điều hành: Windows
+- Công cụ: Postman
+- API: JSONPlaceholder Fake REST API
 
-### 3.1 GET Request
+## 3. Kịch bản kiểm thử 1: GET danh sách bài viết
 
-(Sẽ bổ sung hình ở bước sau)
+- Phương thức: GET
+- URL: https://jsonplaceholder.typicode.com/posts
+- Kết quả mong đợi: Server trả về danh sách bài viết
+- Kết quả thực tế: Gửi yêu cầu thành công
+- Status code: 200 OK
+- Trạng thái: Thành công
 
-### 3.2 POST Request
+![GET Posts](images/get-posts.png)
 
-(Sẽ bổ sung hình ở bước sau)
+## 4. Kịch bản kiểm thử 2: GET chi tiết một bài viết
 
-### 3.3 Viết Test Script
+- Phương thức: GET
+- URL: https://jsonplaceholder.typicode.com/posts/1
+- Kết quả mong đợi: Server trả về thông tin bài viết có id = 1
+- Kết quả thực tế: Gửi yêu cầu thành công
+- Status code: 200 OK
+- Trạng thái: Thành công
 
-(Sẽ bổ sung hình ở bước sau)
+![GET Post Detail](images/get-post-detail.png)
 
-## 4. Nhận xét
+## 5. Kịch bản kiểm thử 3: POST tạo bài viết mới
 
-Postman giúp kiểm thử API nhanh chóng, dễ sử dụng và hỗ trợ tự động hóa kiểm thử.
+- Phương thức: POST
+- URL: https://jsonplaceholder.typicode.com/posts
+- Body:
 
-## 5. Kết luận
-
-Đã tìm hiểu và thực hành các chức năng cơ bản của Postman.
+```json
+{
+  "title": "Postman Test",
+  "body": "Day la bai viet duoc tao bang Postman",
+  "userId": 1
+}
